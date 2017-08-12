@@ -16,12 +16,13 @@ function comma (string) {
   while(string[i]!==",") {
         stack.push(string[i]);
   }
-
+  
   return stack.join("");
 }
 
 
 app.get("/api/whoami", function(req, res) {
+  co
   var ip = comma(req.headers['x-forwarded-for']);
   var lang = comma(req.headers['accept-language']);
   var soft = req.headers['user-agent'];
